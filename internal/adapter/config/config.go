@@ -35,7 +35,7 @@ type (
 
 func ConstructConfig() (*Config, error) {
 	if os.Getenv("APP_ENV") != "production" {
-		err := godotenv.Load()
+		err := godotenv.Load(".centrs.env")
 		if err != nil {
 			return nil, err
 		}
