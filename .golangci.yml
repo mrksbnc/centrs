@@ -1,0 +1,31 @@
+# Refer to golangci-lint's example config file for more options and information:
+# https://github.com/golangci/golangci-lint/blob/master/.golangci.reference.yml
+
+run:
+  timeout: 5m
+  tests: true
+  allow-parallel-runners: false
+  skip-dirs:
+    - vendor
+    - tmp
+    - build
+    - dist
+    - bin
+
+linters-settings:
+  goimports:
+    local-prefixes: "github.com/mrksbnc/centrs"
+
+linters:
+  enable-all: true
+  disable:
+    - funlen # Tool for detection of long functions.
+    - gci # Check imports order. We use goimports instead.
+    - wrapcheck # Checks that errors returned from external packages are wrapped.
+    - varnamelen # It denies vars like: x, y, c, ...
+    - testpackage # Force to use "*_test" package name.
+    - exhaustive # Check exhaustiveness of enum switch statements.
+    - gomnd # An analyzer to detect magic numbers. It is going crazy on x += 1.
+    - unparam # Reports unused function parameters. It is convinient to pass ctx, but don't use it yet.
+    - paralleltest # Most of tests cannot be run in parallel.
+    - gomoddirectives # Allow replacements.
