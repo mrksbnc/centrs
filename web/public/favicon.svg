@@ -1,0 +1,33 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background - Clean slate -->
+  <rect width="32" height="32" rx="6" fill="#E2E8F0"/> <!-- Slate-200 -->
+  
+  <!-- 3D effect - Extrusion/Shadow layer -->
+  <path d="M24.5 11.5C22.8 9.2 20.1 7.5 17 7.5C12 7.5 8 11.4 8 16C8 20.6 12 24.5 17 24.5C20.1 24.5 22.8 22.8 24.5 20.5"
+        stroke-width="5"
+        stroke-linecap="round"
+        stroke="#1D4ED8" 
+        transform="translate(1, 1)"/> 
+
+  <!-- Main C shape - Bold and Blue -->
+  <path d="M24 10.5C22.3 8.2 19.6 6.5 16.5 6.5C11.5 6.5 7.5 10.4 7.5 15C7.5 19.6 11.5 23.5 16.5 23.5C19.6 23.5 22.3 21.8 24 19.5"
+        stroke-width="5"
+        stroke-linecap="round"
+        stroke="url(#cGradient)"/>
+
+  <!-- Highlight effect for 3D -->
+  <path d="M23.5 11.5C22.1 9.7 19.8 8.3 17 8.3C12.9 8.3 9.3 11.4 9.3 15.5C9.3 19.6 12.9 22.7 17 22.7C19.8 22.7 22.1 21.3 23.5 19.5"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke="#60A5FA" 
+        stroke-opacity="0.7"/>
+
+  <!-- Gradients definitions -->
+  <defs>
+    <!-- Main C gradient using Tailwind blues for a modern look -->
+    <linearGradient id="cGradient" x1="7.5" y1="6.5" x2="24" y2="23.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B82F6"/> <!-- bg-blue-500 -->
+      <stop offset="100%" stop-color="#2563EB"/> <!-- bg-blue-600 -->
+    </linearGradient>
+  </defs>
+</svg> 
