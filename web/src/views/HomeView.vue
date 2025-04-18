@@ -167,7 +167,6 @@
 		<div class="container mx-auto px-6">
 			<div class="max-w-3xl mx-auto">
 				<h2 class="text-3xl font-bold mb-16 tracking-tight">CONTACT</h2>
-
 				<div class="flex space-x-6">
 					<a href="https://github.com/mrksbnc" class="hover:text-gray-400 transition-colors">
 						GITHUB
@@ -182,18 +181,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const props = defineProps<{
 	darkMode: boolean;
 }>();
 
 const tileOpacity = ref(Array.from({ length: 64 }, () => Math.random() * 0.5 + 0.5));
-
-const experienceInYears = computed<number>(() => {
-	const currentYear = new Date().getFullYear();
-	return currentYear - 2019;
-});
 
 function animateTiles() {
 	for (let i = 0; i < tileOpacity.value.length; i++) {
