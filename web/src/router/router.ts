@@ -10,6 +10,7 @@ const router = createRouter({
 				el: to.hash,
 			};
 		}
+		return { top: 0 }; // Always scroll to top when navigating
 	},
 });
 

@@ -1,12 +1,12 @@
 export const centrsRoutes = [
 	{
-		path: '/home',
+		path: '/',
 		name: 'home',
-		component: () => import('@/views/HomeView.vue'),
+		component: () => import('@/views/StartGamePage.vue'),
 	},
 	{
-		path: '/projects',
-		name: 'projects',
-		component: () => import('@/views/HomeView.vue'),
+		path: '/game',
+		name: 'game',
+		component: () => import('@/views/GamePage.vue'),
 	},
 ];
